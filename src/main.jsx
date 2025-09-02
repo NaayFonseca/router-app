@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Login } from './pages/Login.jsx';
 import { Cadastro } from './Cadastro.jsx';
+import { NotFound } from './pages/NotFound.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -14,6 +15,8 @@ createRoot(document.getElementById('root')).render(
         <Route path='/' element={<App/>} />
         <Route path='/login' element={<Login />}/>
          <Route path='/cadastro' element={<Cadastro />}/>
+         {/*400*/}
+         <Route path='*' element={<NotFound />}/>
       </Routes>
     </BrowserRouter>
   </StrictMode>,
