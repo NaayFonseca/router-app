@@ -6,12 +6,7 @@ export const Contato = () => {
   return (
 
  <>
-   <Navbar/>
-
-    <div>Contato</div>
-
-    <Footer/>
-
+<h1>contato</h1>
     
     </>
     

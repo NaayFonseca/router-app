@@ -9,32 +9,40 @@ import { Cadastro } from './Cadastro.jsx';
 import { NotFound } from './pages/NotFound.jsx';
 import { Home } from './pages/Home.jsx';
 import { Contato } from './pages/Contato.jsx';
+import { Layout } from './Componentes/Layout.jsx';
 
 const router = createBrowserRouter([
+
+      {
+        path: "/login",
+        element: <Login />,
+      },
+
   {
     path: "/",
-    element: <Login/>,
+    element: <Layout />,
+    children: [
+      {
+        path: "/home",
+        element: <Home />,
+      },
+
+      {
+        path: "/cadastro",
+        element: <Cadastro />,
+      },
+
+      {
+        path: "/contato",
+        element: <Contato/>,
+      },
+    ]
   },
 
-  {
-    path: "/home",
-    element: <Home/>,
-  },
-
-  {
-    path: "/cadastro",
-    element: <Cadastro/>,
-  },
 
   {
     path: "*",
-    element: <NotFound/>,
-  },
-
-
-   {
-    path: "/contato",
-    element: <Contato/>,
+    element: <NotFound />,
   },
 ])
 
