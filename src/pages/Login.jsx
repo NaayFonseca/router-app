@@ -17,7 +17,7 @@ export const Login = () => {
 
     }
 
-const handleEmail = (target) => {
+const handleEmail = (e.target.value) => {
     console.log(e);
     
 }
